@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YourDic</title>
+    <link href='https://fonts.googleapis.com/css?family=Arbutus' rel='stylesheet'>
+
+    <style>@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+*{
+padding: 0;
+margin: 0;
+text-decoration: none;
+list-style:none;
+box-sizing: border-size}
+
+body{
+    font-family: 'Cabin', sans-serif;
+    font-weight:normal;
+    font-style:normal;
+}
+
+.nav{
+ background-color: rgba(253, 208, 10, 0.925);
+ height: 40px;
+}
+
+.nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    float: left;
+}
+
+.nav ul li{
+    display: inline;
+    height: inherit;
+    border-right: 1px solid #bbb;
+    float: left;
+    padding-right: 18px;
+    padding-left: 18px;
+}
+
+.nav ul li a{
+    color: #000;
+    font-family: 'Bungee',sans-serif;
+    font-size: large;
+}
+
+.makehover li a:hover{
+    box-shadow:  0 0 8px 0  indigo;
+}
+
+.textfeild{
+    height:20px;
+    width: 200px;
+    border:2px solid #aaa;
+    border-radius:4px;
+    margin:8px 0;
+    outline:none;
+    padding:8px;
+    font-size: large;
+    font-family: inherit;
+    text-align: center;
+}
+
+.textfeild:focus{
+    border-color:dodgerBlue;
+    box-shadow:0 0 8px 0 dodgerBlue;
+  }
+
+.searchbutton{
+    margin-top: 10px;
+    border-color: indigo;
+    background-color: rgb(255, 255, 255);
+    font-family: inherit;
+    font-size: inherit;
+    height:30px;
+    width: 150px;
+    border-radius: 7px;
+}
+.searchbutton:hover{
+    box-shadow: 0 0 8px 0  indigo;
+}
+
+</style>
+</head>
+<body>
+    <nav class="nav">
+        <ul style="background-color: antiquewhite; width: 150px;">
+            <li ><a href="#" style=" height: inherit;font-family: Arbutus; font-size: x-large;"><b>YourDic</b></a></li>
+        </ul><ul class="makehover">
+            <li><a href="#"><b>Home</b></a></li>
+            <li  style="background-color: antiquewhite;"><a href="https://github.com/AbhinavRai01">GitHub</a></li>
+            <li><a href="https://www.youtube.com/channel/UCmTCDnP82ZkNVSRfTO_sYEw">Youtube</a></li>
+        </ul>
+    </nav>
+    <h3 align = "center">Enter your word here:</h3>
+    <form align="center" action="/" method="get">
+    <input type="text" placeholder="Your word" name="word" class="textfeild" required><br>
+    <input type="submit" value="SEARCH WORD" class="searchbutton">
+    </form>
+    <div align = "center" style="text-align: center;">
+    {% autoescape off %}
+{{ body }}
+{% endautoescape %}
+    </div>
+</body>
+</html>
